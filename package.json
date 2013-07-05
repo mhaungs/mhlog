@@ -1,0 +1,22 @@
+{
+    "name": "mhlog",
+    "description": "Logging manager.",
+    "version": "0.1.5",
+    "author": {
+        "name": "Michael Haungs",
+        "email": "mhaungs@calpoly.edu",
+        "url": "http://www.csc.calpoly.edu/~mhaungs"
+    },
+    "keywords": [
+        "log",
+        "logging"
+    ],
+    "main": "mhlog.js",
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-contrib-watch": "~0.4.4",
+        "grunt-contrib-copy": "~0.4.1",
+        "grunt-shell": "~0.3.0"
+    }
+}
