@@ -1,18 +1,19 @@
 {
-  "name": "mhLog",
-  "version": "0.1.5",
-  "main": "mhlog.js",
-  "ignore": [
-    "package.json",
-    "components",
-    "src",
-    "node_modules",
-	"README.txt",
-	"gruntfile.js",
-	"testMhlog.html"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "inject": "~0.4.2-1"
-  }
+    "name": "mhLog",
+    "version": "0.1.5",
+    "main": "mhlog.js",
+    "ignore": [
+        "package.json",
+        "components",
+        "src",
+        "node_modules",
+        "README.txt",
+        "gruntfile.js",
+        "testMhlog.html",
+        "nbproject"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "inject": "~0.4.2-1"
+    }
 }
