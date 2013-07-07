@@ -1,12 +1,12 @@
 mhlog
 =====
 
-*mhlog* is a simple javascript logging utility for node.js servers and client-side web applications dynamically loaded via [inject] [1].
+*mhlog* is a simple logging utility for node.js servers and client-side web applications that have javascript modules dynamically loaded via [inject] [1].
 
 Example
 -------
 
-Before going into specifics, here is a quick example of using mhLog.  First, you need to *require* mhLog.js:
+Before going into specifics, here is a quick example of using *mhLog*.  First, you need to *require* mhLog.js:
 
 	var mhLog = require("mhlog.js").mhLog;
 
@@ -25,11 +25,16 @@ Then, you use *mhLog.log* as you would *console.log*.  Here's an example:
 Logging Levels
 --------------
 
-mhLog has four possible levels you can use:
+*mhLog* has four possible levels you can use:
 
 * ALL:
 * DEBUG:
 * DEVELOPMENT:
 * PRODUCTION
+
+License
+-------
+Copyright (c) 2013 Michael Haungs <mhaungs at calpoly.edu>
+
 
 [1]: http://www.injectjs.com/		"Inject"
