@@ -27,10 +27,21 @@ Logging Levels
 
 *mhLog* has four possible levels you can use:
 
-* ALL:
-* DEBUG:
-* DEVELOPMENT:
-* PRODUCTION
+* ALL:  All levels are logged
+* DEBUG: DEBUG, DEVELOPMENT, and PRODUCTION messages are logged.
+* DEVELOPMENT: DEVELOPMENT and PRODUCTION messages are logged.
+* PRODUCTION: Only PRODUCTION levels are logged.
+
+The intent is that long-term debugging messages use the DEBUG level and short-term exploration of code behavior  should use the DEVELOPMENT level.  The PRODUCTION level is for error and exception reporting.
+
+Of course, you are free to use the levels in any way the makes sense to you.
+
+Stack Traces
+------------
+
+To provide more information about the source of the message, you can also print an abbreviated stack trace along with your log message.  To turn on stack tracing, use the *setShowStackTrace* method.  It accepts a single boolean parameter.
+
+The stack trace implementation is minimal.  It provides the names of the last four function called.  It works for Chrome, Firefox, and Safari.
 
 License
 -------
