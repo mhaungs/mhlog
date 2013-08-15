@@ -3,6 +3,13 @@ mhlog
 
 *mhlog* is a simple logging utility for node.js servers and client-side web applications that have javascript modules dynamically loaded via [inject] [1].
 
+Installation
+------------
+
+To install *mhlog*, use [bower] [2] in the following way:
+
+	bower install git@github.com:mhaungs/mhlog.git
+
 Example
 -------
 
@@ -49,3 +56,4 @@ Copyright (c) 2013 Michael Haungs <mhaungs at calpoly.edu>
 
 
 [1]: http://www.injectjs.com/		"Inject"
+[1]: http://bower.io/				"Bower"
