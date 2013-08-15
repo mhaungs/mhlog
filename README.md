@@ -55,5 +55,5 @@ License
 Copyright (c) 2013 Michael Haungs <mhaungs at calpoly.edu>
 
 
-[1]: http://www.injectjs.com/		"Inject"
-[1]: http://bower.io/				"Bower"
+[1]: http://www.injectjs.com/	"Inject"
+[2]: http://bower.io/	"Bower"
