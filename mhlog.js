@@ -12,8 +12,7 @@
  * @author mhaungs
  */
 
-(function()
-{
+(function() {
 
     "use strict";  // EMCAScript 5 pragma to catch more javascript errors
 
@@ -41,28 +40,21 @@
     /*
      ************ Public methods *************
      */
-    mhLog.setShowStackTrace = function(val)
-    {
-        if (typeof val === 'boolean')
-        {
+    mhLog.setShowStackTrace = function(val) {
+        if (typeof val === 'boolean') {
             strace = val;
         }
     }
 
-    mhLog.setLoggingLevel = function(level)
-    {
-        if (levelValid(level))
-        {
+    mhLog.setLoggingLevel = function(level) {
+        if (levelValid(level)) {
             currentLevel = level;
         }
     };
 
-    mhLog.log = function(level, msg)
-    {
-        if (levelValid(level))
-        {
-            if (level >= currentLevel)
-            {
+    mhLog.log = function(level, msg) {
+        if (levelValid(level)) {
+            if (level >= currentLevel) {
                 if (strace === true)
                     logCallTrace();
                 console.log("mhlog: Message: " + msg);
@@ -75,8 +67,7 @@
     /*
      ************ Private methods *************
      */
-    function levelValid(level)
-    {
+    function levelValid(level) {
         return (level <= mhLog.LEVEL.PRODUCTION && level >= mhLog.LEVEL.ALL);
     }
 
@@ -84,18 +75,14 @@
     function logCallTrace() {
         var stackArray, i = 0, entry, results = [];
 
-        try
-        {
+        try {
             throw new Error("mhLog");
         }
-        catch (e)
-        {
-            if (e.stack)
-            {
+        catch (e) {
+            if (e.stack) {
                 stackArray = e.stack.split('\n');
                 entry = stackArray.shift(); // get rid of reference to this function (logCallTrace)
-                while (stackArray.length > 0 && i < 4)
-                {
+                while (stackArray.length > 0 && i < 4) {
                     entry = stackArray.shift();  // get one level of call stack
                     results.push(entry.slice(0, entry.indexOf('@')) // keep everything up to @ symbol (Safari)
                             .replace(/^\s+|\s+$/g, '') // Trim whitespaces (Chrome)
