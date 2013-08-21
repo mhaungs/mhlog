@@ -12,7 +12,10 @@
         "logging"
     ],
     "main": "mhlog.js",
-	"repository": "git@github.com:mhaungs/mhlog.git",
+    "repository": "git@github.com:mhaungs/mhlog.git",
+	"engines": {
+		node: "*"
+	},
     "devDependencies": {
         "grunt": "~0.4.1",
         "grunt-contrib-jshint": "~0.6.0",
