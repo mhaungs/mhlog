@@ -44,7 +44,7 @@
         if (typeof val === 'boolean') {
             strace = val;
         }
-    }
+    };
 
     mhLog.setLoggingLevel = function(level) {
         if (levelValid(level)) {

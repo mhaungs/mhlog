@@ -1,6 +1,6 @@
 {
     "name": "mhLog",
-    "version": "0.1.5",
+    "version": "0.1.7",
     "main": "mhlog.js",
     "ignore": [
         "package.json",
@@ -10,7 +10,8 @@
         "README.txt",
         "gruntfile.js",
         "testMhlog.html",
-        "nbproject"
+        "nbproject",
+		"tarball"
     ],
     "dependencies": {},
     "devDependencies": {

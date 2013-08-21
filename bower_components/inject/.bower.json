@@ -1,6 +1,6 @@
 {
   "name": "inject",
-  "version": "0.4.2-1",
+  "version": "0.4.2",
   "main": [
     "dist/inject-ie7.js",
     "dist/inject-ie7.min.js",
@@ -32,12 +32,14 @@
     "Apache",
     "MIT"
   ],
-  "gitHead": "344d05a858019e163fcac1d07f5e98abf4eb947f",
-  "readme": "inject-bower\n============\n\nBower Repository for InjectJS\n",
-  "readmeFilename": "README.md",
-  "_id": "inject@0.4.2-1",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/linkedin/inject-bower.git"
-  }
+  "homepage": "https://github.com/linkedin/inject-bower",
+  "_release": "0.4.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.2",
+    "commit": "18ce0c4c7483165b1c53dfef9325cab6ae1814c2"
+  },
+  "_source": "git://github.com/linkedin/inject-bower.git",
+  "_target": "~0.4.2-1",
+  "_originalSource": "inject"
 }
