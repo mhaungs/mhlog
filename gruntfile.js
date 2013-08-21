@@ -18,7 +18,7 @@ module.exports = function(grunt)
         },
         jshint: {// configure JSHint (http://www.jshint.com/docs/)
 
-            files: ['gruntfile.js', "mhlog.js", "src/js/testMhlog.js"],
+            files: ['gruntfile.js', 'mhlog.js', 'src/js/testMhlog.js'],
             options: {
                 globals: {
                     console: true,
