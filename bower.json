@@ -1,6 +1,6 @@
 {
     "name": "mhLog",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "main": "mhlog.js",
     "ignore": [
         "package.json",

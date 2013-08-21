@@ -8,7 +8,7 @@ module.exports = function(grunt)
                 files: [
                     {
                         expand: true,
-                        cwd: 'components/inject/dist/',
+                        cwd: 'bower_components/inject/dist/',
                         src: ['inject.js'],
                         dest: 'src/lib/inject/',
                         filter: 'isFile'
@@ -33,6 +33,18 @@ module.exports = function(grunt)
                     stdout: true
                 }
             },
+			npm: {
+				command: 'npm update',
+				options: {
+					stdout: true
+				}
+			},
+			tag: {
+				command: 'git tag -a <%=pkg.version %> -m "new mhlog tag"; git push origin <%=pkg.version %>',
+				options: {
+					stdout: true
+				}
+			}
         },
         watch: {
             files: ['<%=jshint.files %>'],
@@ -50,6 +62,8 @@ module.exports = function(grunt)
     grunt.registerTask('default', ['jshint']);
 
     // Register building task
-    grunt.registerTask('update', ['shell:bower', 'copy', 'jshint']);
+    grunt.registerTask('update', ['shell:bower', 'shell:npm', 'copy', 'jshint']);
 
+	// Create a new tag for the repository
+	grunt.registerTask('tag', ['update', 'shell:tag']);
 };
