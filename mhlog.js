@@ -7,6 +7,7 @@
  * @author mhaungs
  */
 
+	/*jshint globalstrict: true*/
     "use strict";  // EMCAScript 5 pragma to catch more javascript errors
 
     /*
@@ -14,7 +15,7 @@
      */
 
     // Log level enumeration
-    LEVEL = {
+    var LEVEL = {
         ALL: 0,
         DEBUG: 1,
         DEVELOPMENT: 2,
@@ -35,13 +36,13 @@
         if (typeof val === 'boolean') {
             strace = val;
         }
-    };
+    }
 
     function setLoggingLevel(level) {
         if (levelValid(level)) {
             currentLevel = level;
         }
-    };
+    }
 
     function log(level, msg) {
         if (levelValid(level)) {
@@ -53,7 +54,7 @@
             }
         }
         return null;
-    };
+    }
 
     /*
      ************ Private methods *************
@@ -90,6 +91,7 @@
      ************ Exports *************
      */
 
+	/* global exports: true */
     exports.LEVEL = LEVEL;
     exports.setShowStackTrace = setShowStackTrace;
     exports.setLoggingLevel = setLoggingLevel;
