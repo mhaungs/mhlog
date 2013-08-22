@@ -3,8 +3,9 @@
     "version": "0.1.9",
     "main": "mhlog.js",
     "ignore": [
+		".git*",
         "package.json",
-        "components",
+        "bower_components",
         "src",
         "node_modules",
         "README.txt",
