@@ -1,9 +1,4 @@
 /*
- * Licensing and Copyright still under review...
- * Possible choices BSD, MIT, Apache
- */
-
-/*
  * mhLog
  *
  * Description: A simple utility to control log output.  You can optionally display
@@ -12,25 +7,21 @@
  * @author mhaungs
  */
 
-(function() {
-
     "use strict";  // EMCAScript 5 pragma to catch more javascript errors
-
-    var mhLog = {};
 
     /*
      ************ Module Variables *************
      */
 
     // Log level enumeration
-    mhLog.LEVEL = {
+    LEVEL = {
         ALL: 0,
         DEBUG: 1,
         DEVELOPMENT: 2,
         PRODUCTION: 3
     };
 
-    var currentLevel = mhLog.LEVEL.PRODUCTION;
+    var currentLevel = LEVEL.PRODUCTION;
     var strace = true; // Boolean that toggles displaying a stack trace
 
     /*
@@ -40,19 +31,19 @@
     /*
      ************ Public methods *************
      */
-    mhLog.setShowStackTrace = function(val) {
+    function setShowStackTrace(val) {
         if (typeof val === 'boolean') {
             strace = val;
         }
     };
 
-    mhLog.setLoggingLevel = function(level) {
+    function setLoggingLevel(level) {
         if (levelValid(level)) {
             currentLevel = level;
         }
     };
 
-    mhLog.log = function(level, msg) {
+    function log(level, msg) {
         if (levelValid(level)) {
             if (level >= currentLevel) {
                 if (strace === true)
@@ -67,8 +58,9 @@
     /*
      ************ Private methods *************
      */
+
     function levelValid(level) {
-        return (level <= mhLog.LEVEL.PRODUCTION && level >= mhLog.LEVEL.ALL);
+        return (level <= LEVEL.PRODUCTION && level >= LEVEL.ALL);
     }
 
     // Works in Safari, Chrome, and FireFox
@@ -94,6 +86,12 @@
         }
     }
 
-    exports.mhLog = mhLog;
+    /*
+     ************ Exports *************
+     */
 
-}());
+    exports.LEVEL = LEVEL;
+    exports.setShowStackTrace = setShowStackTrace;
+    exports.setLoggingLevel = setLoggingLevel;
+    exports.log = log;
+
