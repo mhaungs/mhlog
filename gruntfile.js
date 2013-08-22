@@ -40,7 +40,7 @@ module.exports = function(grunt)
 				}
 			},
 			tag: {
-				command: 'git tag -a <%=pkg.version %> -m "new mhlog tag"; git push origin <%=pkg.version %>',
+				command: 'git commit -a; git push; git tag -a <%=pkg.version %> -m "new mhlog tag"; git push origin <%=pkg.version %>',
 				options: {
 					stdout: true
 				}
