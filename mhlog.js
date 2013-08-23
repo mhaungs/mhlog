@@ -23,7 +23,7 @@
     };
 
     var currentLevel = LEVEL.PRODUCTION;
-    var strace = true; // Boolean that toggles displaying a stack trace
+    var strace = false; // Boolean that toggles displaying a stack trace
 
     /*
      ************ Initialization methods *************
