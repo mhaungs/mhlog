@@ -1,7 +1,7 @@
 {
     "name": "mhlog",
     "description": "Logging manager.",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "author": {
         "name": "Michael Haungs",
         "email": "mhaungs@calpoly.edu",
