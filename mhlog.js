@@ -7,7 +7,10 @@
  * @author mhaungs
  */
 
-	/*jshint globalstrict: true*/
+/* global exports: true */
+module.exports = function() {
+
+    /*jshint globalstrict: true*/
     "use strict";  // EMCAScript 5 pragma to catch more javascript errors
 
     /*
@@ -91,9 +94,11 @@
      ************ Exports *************
      */
 
-	/* global exports: true */
-    exports.LEVEL = LEVEL;
-    exports.setShowStackTrace = setShowStackTrace;
-    exports.setLoggingLevel = setLoggingLevel;
-    exports.log = log;
+    return {
+        LEVEL: LEVEL,
+        setShowStackTrace: setShowStackTrace,
+        setLoggingLevel: setLoggingLevel,
+        log: log
+    };
 
+};
