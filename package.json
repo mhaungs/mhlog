@@ -1,7 +1,7 @@
 {
     "name": "mhlog",
     "description": "Logging manager.",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "author": {
         "name": "Michael Haungs",
         "email": "mhaungs@calpoly.edu",
@@ -13,9 +13,9 @@
     ],
     "main": "mhlog.js",
     "repository": "git://github.com/mhaungs/mhlog.git",
-	"engines": {
-		"node": "*"
-	},
+    "engines": {
+        "node": "*"
+    },
     "devDependencies": {
         "grunt": "~0.4.1",
         "grunt-contrib-jshint": "~0.6.0",
