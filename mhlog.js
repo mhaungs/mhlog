@@ -78,7 +78,7 @@ module.exports = function() {
             if (level >= currentLevel) {
                 if (strace === true)
                     logCallTrace();
-                console.log("mhlog: Message: " + msg);
+                console.log("mhlog: [" + timestamp() + "] Message: " + msg);
                 return msg;
             }
         }
@@ -114,6 +114,11 @@ module.exports = function() {
                 console.log("mhLog: Call Trace: " + results.join(", "));
             }
         }
+    }
+
+    function timestamp() {
+        var ts = new Date();
+        return ts;
     }
 
     /*

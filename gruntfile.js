@@ -11,10 +11,19 @@ module.exports = function(grunt)
                         cwd: 'bower_components/inject/dist/',
                         src: ['inject.js'],
                         dest: 'src/lib/inject/',
-                        filter: 'isFile'
                     }
                 ]
-            }
+            },
+			test: {
+				files: [
+					{
+						expand: true,
+						src: ['**'],
+						dest: '/Applications/MAMP/htdocs/mhLog/',
+						filter: 'isFile'
+					}
+				]
+			}
         },
         jshint: {// configure JSHint (http://www.jshint.com/docs/)
 
@@ -62,8 +71,11 @@ module.exports = function(grunt)
     grunt.registerTask('default', ['jshint']);
 
     // Register building task
-    grunt.registerTask('update', ['shell:bower', 'shell:npm', 'copy', 'jshint']);
+    grunt.registerTask('update', ['shell:bower', 'shell:npm', 'copy:main', 'jshint']);
 
 	// Create a new tag for the repository
 	grunt.registerTask('tag', ['update', 'shell:tag']);
+
+	// Export project to local web server source directory
+	grunt.registerTask('test', ['copy:test']);
 };

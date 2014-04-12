@@ -1,7 +1,7 @@
 {
     "name": "mhlog",
     "description": "Logging manager.",
-    "version": "0.1.12",
+    "version": "0.2.0",
     "author": {
         "name": "Michael Haungs",
         "email": "mhaungs@calpoly.edu",
@@ -17,10 +17,22 @@
         "node": "*"
     },
     "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-contrib-jshint": "~0.6.0",
-        "grunt-contrib-watch": "~0.4.4",
-        "grunt-contrib-copy": "~0.4.1",
-        "grunt-shell": "~0.3.0"
+        "grunt": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-shell": "*",
+        "qunitjs": "~1.12.0",
+        "karma-script-launcher": "*",
+        "karma-firefox-launcher": "*",
+        "karma-chrome-launcher": "*",
+        "karma-html2js-preprocessor": "*",
+        "karma-jasmine": "*",
+        "karma-coffee-preprocessor": "*",
+        "requirejs": "*",
+        "karma-requirejs": "*",
+        "karma-phantomjs-launcher": "*",
+        "karma": "*",
+        "karma-qunit": "*"
     }
 }

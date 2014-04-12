@@ -1,5 +1,5 @@
 var temp = require("src/js/temp.js");
-var mhLog = require("mhlog.js").mhLog;
+var mhLog = require("mhlog.js")();
 
 main();
 
@@ -17,3 +17,4 @@ function oneLevelDeep() {
 function twoLevelDeep() {
     mhLog.log(mhLog.LEVEL.DEBUG, "In testMhlog.js:twoLevelDeep");
 }
+
