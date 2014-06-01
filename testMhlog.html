@@ -8,15 +8,6 @@
             Inject.reset();
             Inject.setModuleRoot(".");
             Inject.setExpires(0);
-            /*Inject.addRule(/stacktrace/, {
-             path: 'src/lib/stacktrace-min/index.js',
-             pointcuts: {
-             afterFetch: function (next, text, moduleName, requestorName) {
-             console.log("mN = " + moduleName);
-             next(null, [text, 'module.exports = printStackTrace;'].join('\n'));
-             }
-             }
-             });*/
             window.addEventListener('load', function() {
                 require.run('src/js/testMhlog');
             });
